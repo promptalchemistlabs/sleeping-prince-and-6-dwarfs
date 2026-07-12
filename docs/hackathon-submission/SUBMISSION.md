@@ -81,6 +81,8 @@ We have built a working demo for Tembusu Circle. A founder can send a request th
 
 We will sell Kingdom of PAL as a monthly subscription for community-led businesses. Smaller businesses can start with a basic plan, while larger teams can pay for more AI usage, more integrations, more team members, and custom workflows. We can also earn from setup and onboarding services, then later offer enterprise plans and a marketplace for specialist agents.
 
+Alternatively, this can be open sourced also.
+
 ## FINAL CHECKS
 
 - Confirm the name and public contact email.
