@@ -60,4 +60,3 @@ log "building the static site"
 
 [[ -f "$WEBSITE_DIR/dist/index.html" ]] || die "build completed without website/dist/index.html"
 log "build ready at $WEBSITE_DIR/dist"
-

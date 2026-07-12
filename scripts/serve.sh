@@ -19,4 +19,3 @@ esac
 
 log "serving $current_link on 0.0.0.0:$port"
 exec python3 -m http.server "$port" --bind 0.0.0.0 --directory "$current_link"
-

@@ -77,4 +77,3 @@ remote_sha="$(git -C "$REPO_ROOT" rev-parse "$target")"
 [[ "$head_sha" == "$remote_sha" ]] || die "local HEAD does not match $target after sync"
 
 log "sync complete at $head_sha"
-
