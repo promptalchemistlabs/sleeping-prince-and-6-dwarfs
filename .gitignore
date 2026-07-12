@@ -1,0 +1,11 @@
+# Root runtime configuration. Keep the committed template in .env.example.
+.env
+.env.*
+!.env.example
+
+# Local runtime state and generated output.
+/.deploy/
+/data/
+/logs/
+/node_modules/
+/dist/

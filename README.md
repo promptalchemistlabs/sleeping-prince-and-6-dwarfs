@@ -14,12 +14,12 @@ submodules or accessed as deployed services.
 
 Kingdom of PAL starts with four mandatory roles:
 
-| Agent | Core role | Responsibility |
-| --- | --- | --- |
-| Orin | Community coordinator | Understand community needs, select context, and route work |
-| Scribe | Content producer | Create website, blog, educational, and remixed content |
-| Rick | Security governor | Enforce permissions, approvals, privacy, and policy |
-| Bastion | System doctor | Diagnose agent, infrastructure, integration, and memory health |
+| Agent   | Core role             | Responsibility                                                 |
+| ------- | --------------------- | -------------------------------------------------------------- |
+| Orin    | Community coordinator | Understand community needs, select context, and route work     |
+| Scribe  | Content producer      | Create website, blog, educational, and remixed content         |
+| Rick    | Security governor     | Enforce permissions, approvals, privacy, and policy            |
+| Bastion | System doctor         | Diagnose agent, infrastructure, integration, and memory health |
 
 These core roles cannot be removed through the normal lifecycle. Their current
 implementations may be upgraded or replaced by contract-compatible agents.
@@ -56,15 +56,43 @@ without depending on agent internals.
 ```text
 .
 ├── agent-registry.yaml              # Installed agents and lifecycle rules
+├── .env.example                     # Shared runtime configuration contract
 ├── agents/                           # Future Git submodule mount points
 ├── approval-policies/                # Risk and human-approval rules
 ├── demo/                             # Hackathon demo instructions and fixtures
 ├── docs/                             # Product vision and presentation
 ├── founders-charter/                 # Shared direction and operating principles
 ├── memory/                           # Shared-memory conventions (not runtime data)
+├── scripts/                          # Safe build, sync, redeploy and serve commands
 ├── shared-contracts/                 # Versioned JSON Schema contracts
 └── workflow-definitions/             # Declarative multi-agent workflows
 ```
+
+## Operations
+
+The repository includes fail-closed operational scripts for local and Zo
+Computer checkouts:
+
+```bash
+./scripts/build.sh
+./scripts/sync.sh
+./scripts/redeploy.sh
+```
+
+`sync.sh` fast-forwards the parent and restores the four submodules to their
+reviewed pins. `redeploy.sh` validates the website before atomically activating
+a versioned static release. See [`docs/OPERATIONS.md`](docs/OPERATIONS.md) for
+hosting, health-check, rollback and Zo managed-service setup.
+
+## Hackathon environment
+
+All four agents use the single `.env` file at the kingdom root. Start from
+`.env.example`; do not create agent-local environment files. Agent runtimes read
+their assigned values from `process.env` and are launched from the root with
+Node's `--env-file=.env` option.
+
+See [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md) for variable ownership and the
+launch convention.
 
 ## Agent lifecycle
 

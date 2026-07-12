@@ -3,6 +3,19 @@
 The first demo should prove one thin vertical slice rather than the complete
 platform.
 
+## Environment
+
+Configure the demo once at the repository root:
+
+```bash
+cp .env.example .env
+```
+
+Fill in the OpenAI credentials and the single shared Turso database credentials
+in that root file. All agent processes
+must be launched from the kingdom root with `node --env-file=.env ...`; nested
+agent `.env` files are not used.
+
 ## Primary scenario
 
 Founder request:

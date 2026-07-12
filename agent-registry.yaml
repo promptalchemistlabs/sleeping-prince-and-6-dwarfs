@@ -6,6 +6,12 @@ metadata:
   description: Source of truth for agents installed in Kingdom of PAL.
 
 spec:
+  environment:
+    file: .env
+    template: .env.example
+    resolution: kingdom-root
+    inheritedByAgents: true
+
   rules:
     coreRolesRequired: true
     coreImplementationsReplaceable: true
