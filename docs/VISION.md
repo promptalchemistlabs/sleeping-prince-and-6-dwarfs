@@ -1,762 +1,571 @@
 # Kingdom of PAL
 
-> Build the team your community needs before you can afford to hire it.
+> Build a fleet of agents to operate an AI community business.
 
 ## Overview
 
-Kingdom of PAL is a modular, multi-agent operating system designed for community-driven businesses.
+Kingdom of PAL is a modular operating system for community-driven businesses.
 
-It allows a founder to deploy a coordinated team of specialised AI agents that share a common vision, understand their individual responsibilities, and work together within the same environment.
+It coordinates specialised AI agents that live in independent repositories but operate under one shared vision, common contracts, clear permissions, and human approval rules.
 
-Instead of relying on disconnected AI tools or hiring a full operational team too early, founders can start with a small AI kingdom and expand it as their community and business grow.
+The main Kingdom repository is a **repository of repositories**. It does not contain every agent implementation. It defines how agents are discovered, configured, governed, and coordinated.
+
+The initial kingdom contains four essential agents:
+
+1. Orin — community intelligence and coordination
+2. Scribe — website, blog, and content production
+3. Rick — cybersecurity and policy enforcement
+4. Bastion — agent and infrastructure diagnosis
 
 ---
 
 ## The Problem
 
-Community-driven businesses often begin with one founder managing almost every responsibility:
+Community founders often manage engagement, content, websites, security, infrastructure, support, and business operations alone.
 
-* Community engagement
-* Content creation
-* Social media
-* Website management
-* Infrastructure
-* Security
-* Sales
-* Customer support
-* Business operations
+Individual AI tools can help with isolated tasks, but they rarely behave like members of the same organisation. They may not:
 
-As the community grows, these responsibilities become increasingly difficult to manage.
+* Share the founder's vision
+* Exchange context through consistent contracts
+* Respect permissions and operating boundaries
+* Collaborate across business functions
+* Escalate risky decisions to a human
+* Remain observable and diagnosable
+* Evolve independently without breaking the wider system
 
-Information becomes fragmented across tools and conversations. Important tasks are missed. Work becomes inconsistent. The founder eventually becomes the bottleneck for every decision and workflow.
-
-Existing AI agents can help with individual tasks, but they often operate in isolation.
-
-They may not:
-
-* Understand the founder's wider vision
-* Share context with other agents
-* Follow consistent organisational rules
-* Respect clear permissions and boundaries
-* Collaborate across different business functions
-* Grow alongside the business
-
-Community founders need a lightweight and modular way to deploy a coordinated AI team without having to build an entire agentic system from scratch.
+The founder remains the integration layer and eventually becomes the bottleneck.
 
 ---
 
 ## The Solution
 
-Kingdom of PAL provides a reusable template for building an AI-powered organisation.
+Kingdom of PAL provides the organisational layer for a fleet of independently developed agents.
 
-The founder defines the vision, values, priorities, and operating rules of the business through a central document called the **Founder's Charter**.
+The founder defines the kingdom through a **Founder's Charter** containing:
 
-Specialised AI agents then operate within that shared direction.
-
-Each agent has:
-
-* A specific role
-* Clear responsibilities
-* Defined tools
-* Access permissions
-* Operating boundaries
-* Escalation rules
-* Collaboration rules
-
-The agents live within the same environment, share relevant context, and work together toward the founder's vision.
-
-Founders can begin with only the agents they need and add new agents as their business grows.
-
----
-
-## Target Users
-
-Kingdom of PAL is designed primarily for community-driven businesses and organisations.
-
-Examples include:
-
-* Professional communities
-* Creator-led businesses
-* Membership communities
-* Education communities
-* Cohort-based programmes
-* Open-source communities
-* Founder networks
-* Ambassador programmes
-* Industry groups
-* Niche interest communities
-
-The ideal user is a founder who has started building a community but does not yet have the operational team required to manage and grow it consistently.
-
----
-
-## Core Value Proposition
-
-Kingdom of PAL turns one overwhelmed community founder into an AI-powered operating team.
-
-It helps founders:
-
-* Reduce operational overload
-* Maintain consistent community engagement
-* Coordinate work across different business functions
-* Build operational capacity before hiring employees
-* Preserve organisational knowledge
-* Scale their community without immediately increasing headcount
-
----
-
-# The Kingdom
-
-## Orin
-
-### Role
-
-Community Steward and Promptsmith
-
-### Responsibilities
-
-* Manage community interactions
-* Answer frequently asked questions
-* Welcome new members
-* Encourage meaningful discussions
-* Identify community needs
-* Turn founder intentions into clear prompts and workflows
-* Route requests to the appropriate agent
-
-### Boundaries
-
-* Must not make major business decisions
-* Must not share private community information
-* Must escalate sensitive issues to the founder
-* Must not perform high-risk actions without approval
-
----
-
-## Bastion
-
-### Role
-
-DevOps and Infrastructure Doctor
-
-### Responsibilities
-
-* Monitor system health
-* Check service availability
-* Detect infrastructure issues
-* Review logs and error reports
-* Recommend operational fixes
-* Maintain agent health checks
-* Report system risks to the founder
-
-### Boundaries
-
-* Must not modify production infrastructure without approval
-* Must not expose credentials or private configuration
-* Must not perform destructive actions automatically
-* Must escalate critical incidents
-
----
-
-## Scribe
-
-### Role
-
-Website and Blog Caretaker
-
-### Responsibilities
-
-* Draft blog articles
-* Maintain website content
-* Update documentation
-* Turn community discussions into useful resources
-* Organise the kingdom's knowledge
-* Preserve the founder's ideas and intellectual property
-
-### Boundaries
-
-* Must follow the brand voice
-* Must not publish content without approval
-* Must verify factual claims before publication
-* Must protect confidential information
-
----
-
-## Durik
-
-### Role
-
-Guardrail and Security Watcher
-
-### Responsibilities
-
-* Review agent permissions
-* Detect unsafe or suspicious actions
-* Protect files and sensitive information
-* Enforce operational policies
-* Block unauthorised system access
-* Review actions before execution
-* Maintain an audit trail of agent activities
-
-### Boundaries
-
-* Must prioritise safety over speed
-* Must block actions outside an agent's permissions
-* Must not reveal system architecture or credentials
-* Must escalate security incidents immediately
-
----
-
-## Barik Signalhammer
-
-### Role
-
-Social Media and Content Workflow Agent
-
-### Responsibilities
-
-* Extract ideas from existing content
-* Remix content for different platforms
-* Turn long-form content into short-form content
-* Create social media drafts
-* Maintain content consistency
-* Recommend content repurposing opportunities
-* Track the content production workflow
-
-### Boundaries
-
-* Must not publish without approval
-* Must preserve the original meaning of the content
-* Must follow the brand guidelines
-* Must not create misleading or exaggerated claims
-
----
-
-## Keldor Emberheart
-
-### Role
-
-Sales, Customer Success, and Keeper of the Hearth
-
-### Responsibilities
-
-* Respond to customer enquiries
-* Qualify potential customers
-* Support community members
-* Follow up with leads
-* Identify recurring customer problems
-* Maintain frequently asked questions
-* Recommend suitable products or services
-* Ensure members feel welcomed and supported
-
-### Boundaries
-
-* Must not make unauthorised promises
-* Must not offer discounts without approval
-* Must not access unnecessary customer information
-* Must escalate complaints and sensitive situations
-
----
-
-# Core Architecture
-
-Kingdom of PAL is designed to remain minimal at the beginning and expandable over time.
-
-The core system consists of five components.
-
-## 1. Founder's Charter
-
-The Founder's Charter is the central source of direction for the entire kingdom.
-
-It contains:
-
-* Vision
-* Mission
+* Vision and mission
 * Community values
 * Brand voice
 * Current priorities
-* Business goals
 * Operating principles
 * Approval requirements
 * Prohibited actions
 * Success metrics
 
-Every agent must operate according to the Founder's Charter.
+Each agent is installed from its own repository and registered with the kingdom through a standard manifest.
 
-Example:
+Every agent declares:
 
-```markdown
-# Founder's Charter
+* Capabilities
+* Inputs and outputs
+* Tools
+* Permissions
+* Memory access
+* Boundaries
+* Approval requirements
+* Escalation rules
+* Health checks
 
-## Vision
-
-Help professionals navigate the agentic economy and learn how to collaborate effectively with AI.
-
-## Mission
-
-Build a trusted community that teaches practical AI, prompting, automation, and agentic systems.
-
-## Values
-
-- Create value before extracting value
-- Protect the trust of the community
-- Keep humans in control of important decisions
-- Prefer practical outcomes over hype
-- Share knowledge openly where possible
-
-## Current Priorities
-
-1. Grow the community
-2. Improve member engagement
-3. Produce useful educational content
-4. Identify recurring community problems
-5. Develop sustainable products and services
-
-## Approval Requirements
-
-Founder approval is required before:
-
-- Publishing public content
-- Sending sales offers
-- Changing infrastructure
-- Accessing sensitive information
-- Spending money
-- Deleting files or data
-```
+This allows agents to evolve independently while remaining compatible with the wider kingdom.
 
 ---
 
-## 2. Shared Kingdom Memory
+# The Essential Kingdom
 
-The shared memory stores relevant organisational knowledge.
+## Orin
 
-It may contain:
+**Repository:** `zo-agent-community`
 
-* Community information
-* Brand guidelines
-* Content archives
-* Frequently asked questions
-* Product information
-* Business decisions
-* Customer feedback
-* Current projects
-* Agent activity logs
-* Founder instructions
+### Role
 
-Agents should only access the information required for their responsibilities.
+Community Steward and Kingdom Coordinator
 
-Shared memory does not mean unrestricted access.
+### Responsibilities
 
----
+* Understand community conversations and recurring needs
+* Answer routine community questions
+* Retrieve relevant community context
+* Translate founder intentions into structured tasks
+* Route work to the appropriate agent
+* Coordinate multi-agent workflows
+* Escalate sensitive decisions to the founder
 
-## 3. Agent Template
+### Boundaries
 
-Every agent follows the same modular structure.
-
-```markdown
-# Agent Name
-
-## Identity
-
-Who the agent is within the kingdom.
-
-## Role
-
-The function the agent performs.
-
-## Purpose
-
-Why the agent exists.
-
-## Goals
-
-The outcomes the agent should create.
-
-## Responsibilities
-
-The tasks the agent is expected to perform.
-
-## Inputs
-
-The information the agent can receive.
-
-## Outputs
-
-The work the agent can produce.
-
-## Tools
-
-The systems and tools the agent can access.
-
-## Permissions
-
-The actions the agent is allowed to perform.
-
-## Boundaries
-
-The actions the agent must never perform.
-
-## Approval Requirements
-
-Actions that require founder approval.
-
-## Escalation Rules
-
-Situations that must be passed to the founder or another agent.
-
-## Collaboration Rules
-
-The agents this agent can consult, delegate to, or receive work from.
-
-## Memory Access
-
-The information the agent is allowed to read or write.
-
-## Success Metrics
-
-How the agent's performance is evaluated.
-```
-
-This structure allows new agents to be added without redesigning the entire system.
+* Must not make major business decisions
+* Must not expose private community information
+* Must not publish or execute high-risk actions without approval
+* Must provide only the minimum required context to other agents
 
 ---
 
-## 4. Kingdom Coordinator
+## Scribe
 
-The coordinator acts as the routing and orchestration layer.
+**Repository:** `zo-agent-web-and-blog`
 
-It determines:
+### Role
 
-* Which agent should receive a request
-* Whether multiple agents are needed
-* What context each agent receives
-* What order the agents should work in
-* Whether founder approval is required
-* What results should be saved into memory
+Website, Blog, and Content Agent
 
-For the initial version, Orin can act as the Kingdom Coordinator.
+### Responsibilities
 
-Example workflow:
+* Turn community insights into articles and educational resources
+* Maintain website copy and documentation
+* Repurpose long-form content for social and community channels
+* Preserve brand voice and original meaning
+* Organise published knowledge
+* Prepare content changes for approval
+
+### Boundaries
+
+* Must not publish without approval
+* Must verify factual claims
+* Must not expose confidential information
+* Must not create misleading or exaggerated content
+
+Scribe includes content remixing, so a separate social-media agent is not required for the initial kingdom.
+
+---
+
+## Rick
+
+**Repository:** `zo-agent-cybersecurity`
+
+### Role
+
+Cybersecurity and Policy Enforcement Agent
+
+### Responsibilities
+
+* Review agent permissions and requested actions
+* Detect unsafe or suspicious behaviour
+* Enforce approval and access policies
+* Block actions outside an agent's permissions
+* Protect credentials, files, and private information
+* Maintain security audit records
+* Escalate security incidents immediately
+
+### Boundaries
+
+* Must prioritise safety over execution speed
+* Must not reveal credentials or sensitive architecture
+* Must not grant itself or other agents additional permissions
+* Must require explicit approval for consequential actions
+
+Rick answers:
+
+> Is this action permitted and safe?
+
+---
+
+## Bastion
+
+**Repository:** `zo-agent-doctor`
+
+### Role
+
+Agent and Infrastructure Doctor
+
+### Responsibilities
+
+* Check agent and service health
+* Diagnose failed workflows and integrations
+* Review logs, errors, and health-check results
+* Monitor the shared memory hub and agent memory spokes
+* Detect failed memory reads, writes, indexing, and synchronisation
+* Measure retrieval latency, index freshness, and storage health
+* Identify stale, duplicated, or orphaned memory records
+* Recommend reindexing, recovery, or cleanup actions
+* Identify configuration and dependency problems
+* Recommend recovery actions
+* Report operational risks to the founder
+
+### Boundaries
+
+* Must not modify production systems without approval
+* Must not perform destructive recovery actions automatically
+* Must not expose credentials or private configuration
+* Must inspect memory metadata and health signals by default, not private business content
+* Must not alter or delete memory records without approval
+* Must request temporary access through Rick when content-level diagnosis is required
+* Must send security-related findings to Rick
+
+Bastion answers:
+
+> Is the system functioning correctly?
+
+Rick governs memory access and safety. Bastion diagnoses memory and system reliability. Their responsibilities must not overlap.
+
+---
+
+# Repository-of-Repositories Architecture
+
+## Kingdom Repository
+
+The main repository owns the organisational layer:
 
 ```text
-Founder Request
+sleeping-prince-and-6-dwarfs/
+├── founders-charter/
+├── agent-registry.yaml
+├── shared-contracts/
+├── workflow-definitions/
+├── approval-policies/
+├── memory/
+├── demo/
+└── docs/
+```
+
+It should contain:
+
+* The Founder's Charter
+* Agent registry
+* Shared input and output contracts
+* Workflow definitions
+* Approval policies
+* Memory access rules
+* Activity logs
+* Hackathon demo configuration
+
+It should not duplicate the internal implementation of each agent.
+
+## Agent Repositories
+
+Each agent repository owns:
+
+* Agent implementation
+* System instructions
+* Tool integrations
+* Tests
+* Deployment instructions
+* Health-check endpoint
+* Versioned agent manifest
+
+Example registry entry:
+
+```yaml
+name: orin
+repository: https://github.com/promptalchemistlabs/zo-agent-community
+version: 0.1.0
+capabilities:
+  - community-question-analysis
+  - workflow-routing
+permissions:
+  - read:community-knowledge
+  - write:workflow-tasks
+healthcheck: /health
+```
+
+The kingdom should depend on declared contracts and versions rather than agent internals.
+
+---
+
+# Core Architecture
+
+The initial system consists of six components:
+
+## 1. Founder's Charter
+
+The source of vision, priorities, values, policies, and approval rules for every agent.
+
+## 2. Agent Registry
+
+The catalogue of installed agents, repositories, versions, capabilities, permissions, and health checks.
+
+## 3. Shared Contracts
+
+Standard request and response formats that allow independently developed agents to collaborate.
+
+## 4. Shared Kingdom Memory
+
+Kingdom memory follows a hub-and-spoke model:
+
+* Each agent owns a private memory spoke
+* The shared hub stores approved organisational knowledge and cross-agent summaries
+* A memory broker enforces access rules and retrieves permitted context
+* Agents do not receive unrestricted access to another agent's raw memory
+
+Before starting a task, an agent retrieves:
+
+* Pinned context such as the Founder's Charter and active policies
+* Semantically relevant memories
+* A small number of recent memories
+* Explicitly referenced workflow state
+
+The initial retrieval strategy should combine the top three relevant memories with the top two recent memories. Relevance, recency, importance, and source trust should determine ranking.
+
+After completing a task, the agent:
+
+1. Writes detailed task memory to its own spoke
+2. Publishes a concise reusable summary to the shared hub
+3. Records the source agent, task, timestamp, visibility, and importance
+
+Rick controls which memories an agent may access. Bastion monitors whether memory retrieval, indexing, and writes are functioning correctly.
+
+## 5. Kingdom Coordinator
+
+Orin initially performs request routing, context selection, task assignment, and result collection.
+
+## 6. Governance and Observability
+
+Rick enforces security and memory-access policies. Bastion monitors agent, infrastructure, and memory health. Important actions are logged and reviewable.
+
+---
+
+# Core Workflows
+
+## Community Content Workflow
+
+```text
+Founder request
       |
       v
-Kingdom Coordinator
-      |
-      +--> Identify required agents
-      |
-      +--> Gather relevant context
-      |
-      +--> Assign tasks
-      |
-      +--> Collect agent outputs
-      |
-      +--> Send risky actions to Durik
-      |
-      +--> Request founder approval
+Orin identifies a recurring community need
       |
       v
-Final Output
+Scribe creates and repurposes the content
+      |
+      v
+Rick reviews privacy, permissions, and policy
+      |
+      v
+Founder approves publication
+      |
+      v
+Decision and output are stored in memory
+```
+
+## Operational Diagnosis Workflow
+
+```text
+Agent, workflow, or memory operation fails
+      |
+      v
+Bastion checks health, logs, indexes, and dependencies
+      |
+      v
+Bastion recommends a recovery action
+      |
+      v
+Rick reviews the action if it changes access or production
+      |
+      v
+Founder approves consequential changes
 ```
 
 ---
 
-## 5. Governance and Guardrails
+# Governance Model
 
-Every action should follow a simple risk model.
+## Low-Risk Actions
 
-### Low-Risk Actions
-
-Agents may perform these automatically.
-
-Examples:
+Agents may perform these automatically:
 
 * Drafting content
-* Summarising information
-* Organising notes
-* Suggesting responses
-* Creating task lists
-* Identifying community questions
+* Summarising discussions
+* Organising knowledge
+* Creating task plans
+* Running read-only health checks
 
-### Medium-Risk Actions
+## Medium-Risk Actions
 
-Agents may prepare the action but require founder approval.
-
-Examples:
+Agents may prepare these actions but require founder approval:
 
 * Publishing content
-* Sending customer messages
 * Updating website pages
-* Contacting leads
-* Changing workflows
+* Sending community messages
+* Changing workflows or configuration
+* Applying recommended operational fixes
 
-### High-Risk Actions
+## High-Risk Actions
 
-Agents must never perform these without explicit approval.
-
-Examples:
+Agents must never perform these without explicit approval:
 
 * Deleting data
 * Modifying production infrastructure
 * Spending money
-* Accessing credentials
+* Accessing or exposing credentials
 * Changing permissions
-* Sending legal or financial commitments
 * Sharing private community information
-
----
-
-# Example Workflow
-
-## Community Content Workflow
-
-A member asks an important question inside the community.
-
-### Step 1: Orin
-
-Orin identifies that the question could benefit the wider community.
-
-Orin summarises the discussion and sends the idea to Scribe.
-
-### Step 2: Scribe
-
-Scribe turns the discussion into a structured article or guide.
-
-### Step 3: Barik
-
-Barik converts the article into:
-
-* A LinkedIn post
-* A Telegram message
-* A WhatsApp community post
-* A short social media caption
-* A content thread
-
-### Step 4: Durik
-
-Durik checks that:
-
-* No private member information is exposed
-* No confidential information is included
-* The content follows publishing rules
-* The agents remained within their permissions
-
-### Step 5: Founder
-
-The founder reviews and approves the content.
-
-### Step 6: Kingdom Memory
-
-The final content and decision are stored in the kingdom's shared memory.
+* Making legal or financial commitments
 
 ---
 
 # Minimum Viable Kingdom
 
-The first version should remain intentionally small.
+## Required Agents
 
-## Required Components
+1. Orin — community context and orchestration
+2. Scribe — content creation and repurposing
+3. Rick — security and policy review
+4. Bastion — health checks and diagnosis
+
+The primary demo should use Orin, Scribe, and Rick. Bastion should support a separate operational-health scenario.
+
+## Required Platform Components
 
 * Founder's Charter
-* Shared memory
-* Agent configuration template
+* Agent registry
+* Shared request and response contracts
 * Task router
-* Approval system
+* Approval mechanism
 * Activity log
+* Private agent memory spokes
+* Shared memory hub
+* Permission-aware memory broker
+* Hybrid relevant-and-recent Top-K retrieval
+* Agent health-check contract
+* Memory health-check contract
 
-## Initial Agents
+## Hackathon Non-Goals
 
-For the hackathon, the minimum useful combination is:
+The first version does not need:
 
-1. Orin — coordinator and community steward
-2. Scribe — long-form content creator
-3. Barik — content remix agent
-4. Durik — security and approval guardrail
+* More agent roles
+* A public agent marketplace
+* Fully autonomous publishing
+* Automated production recovery
+* Complex long-term memory
+* Support for every community platform
+* A general-purpose multi-agent framework
 
-Bastion and Keldor can be introduced as optional extensions.
+The objective is to prove that independent agent repositories can operate as one governed organisation.
 
 ---
 
 # Hackathon Demo
 
-## Demo Scenario
+## Demo One: Community Campaign
 
-A founder enters:
+The founder enters:
 
 ```text
 Create an educational campaign based on the most common questions from my community.
 ```
 
-## Demo Flow
+Flow:
 
 1. Orin reviews the community knowledge base.
-2. Orin identifies a recurring member problem.
-3. Scribe creates an educational article.
-4. Barik converts the article into content for multiple platforms.
-5. Durik reviews the outputs for policy and privacy risks.
-6. The founder receives the final content for approval.
-7. The system records the workflow and result.
+2. Orin identifies a recurring problem.
+3. Scribe creates an article and channel-specific versions.
+4. Rick reviews the outputs for privacy and policy risks.
+5. The founder approves the final content.
+6. The kingdom records the workflow and decision.
+
+## Demo Two: Agent Doctor
+
+1. One agent or integration is deliberately misconfigured.
+2. Bastion detects the failed health check.
+3. Bastion diagnoses the likely cause.
+4. Bastion recommends a recovery action.
+5. Rick checks the action if it affects production or permissions.
 
 ## What the Demo Proves
 
-The demo demonstrates that:
-
-* Agents have specialised responsibilities
-* Agents share a common organisational vision
-* Agents collaborate instead of operating independently
+* Agents can live in separate repositories
+* Agents can be discovered through a shared registry
+* Agents collaborate through standard contracts
+* All agents follow the same organisational vision
 * Sensitive actions remain under human control
-* New agents can be added through a reusable template
-* The system can support communities beyond Prompt Alchemist Labs
-
----
-
-# Modularity
-
-Kingdom of PAL follows a plug-and-play model.
-
-A founder should be able to:
-
-1. Install the core kingdom
-2. Complete the Founder's Charter
-3. Select the agents they need
-4. Configure tools and permissions
-5. Connect their community platforms
-6. Add new agents as responsibilities grow
-
-Possible future agents include:
-
-* Event organiser
-* Research analyst
-* Finance keeper
-* Partnership manager
-* Recruitment agent
-* Learning programme designer
-* Community insights analyst
-* Product feedback agent
-
-Each new agent should be installable without changing the core architecture.
+* Security and operational health have distinct owners
+* New agents can be added without redesigning the kingdom
 
 ---
 
 # Design Principles
 
+## Repository Independence
+
+Agents can be developed, versioned, tested, and deployed independently.
+
+## Contract-First Integration
+
+Agents collaborate through stable manifests and shared input/output schemas.
+
 ## Start Small
 
-The system should work with one or two agents before requiring a larger kingdom.
-
-## Modular by Default
-
-Every agent should be independently installable, removable, and configurable.
+The system must demonstrate value with the four essential agents before adding more.
 
 ## Human-Controlled
 
-The founder remains responsible for important decisions.
-
-## Shared Vision
-
-All agents operate according to the same Founder's Charter.
+The founder remains responsible for consequential decisions.
 
 ## Least Privilege
 
-Agents should only receive the access required to perform their roles.
+Agents receive only the access required for their responsibilities.
 
 ## Observable
 
-Every important action should be logged and reviewable.
-
-## Community-First
-
-The system should strengthen trust and improve the member experience.
+Every important workflow, decision, failure, and approval is reviewable.
 
 ## Tool-Agnostic
 
-The kingdom should not depend entirely on one AI model, platform, or vendor.
+The kingdom should not depend entirely on one model, framework, or platform.
 
 ---
 
 # Competitive Differentiation
 
-Kingdom of PAL is not merely a collection of AI chatbots.
+Kingdom of PAL is not a collection of AI chatbots and not simply several agents running on the same server.
 
 It provides:
 
 * A reusable organisational structure
-* Standardised agent roles
+* Independently deployable agent repositories
+* A standard agent registry and contracts
 * Shared organisational context
-* Agent permissions and boundaries
-* Multi-agent coordination
-* Human approval workflows
-* Community-focused operating templates
-* A modular system for future expansion
+* Explicit permissions and boundaries
+* Multi-agent workflow coordination
+* Human approval mechanisms
+* Security enforcement
+* Operational diagnosis
 
-The core innovation is not that several agents run on the same server.
-
-The core innovation is that the agents operate like members of the same organisation.
-
-They share a vision, understand their responsibilities, collaborate through defined workflows, and remain accountable to the founder.
+The core innovation is that independently developed agents behave like accountable members of the same organisation.
 
 ---
 
 # Long-Term Vision
 
-Kingdom of PAL can evolve into a marketplace and ecosystem of reusable agent roles.
-
-Community founders could install specialised agents based on their needs.
-
-Examples:
+Kingdom of PAL can evolve into an ecosystem of installable agent repositories.
 
 ```text
-kingdom install community-steward
-kingdom install content-scribe
-kingdom install security-watcher
-kingdom install customer-success
-kingdom install event-organiser
+kingdom install zo-agent-community
+kingdom install zo-agent-web-and-blog
+kingdom install zo-agent-cybersecurity
+kingdom install zo-agent-doctor
 ```
 
-Each agent package could include:
+Future agents can cover events, research, finance, partnerships, customer success, education, and product feedback.
 
-* Role definition
-* System instructions
-* Required tools
-* Permissions
-* Workflows
-* Guardrails
-* Memory schema
-* Success metrics
-
-This would allow builders to create and distribute agents that work within a shared organisational framework.
+New agents should be installable through a standard manifest without changing the core architecture.
 
 ---
 
 # Success Metrics
 
-The initial version can be evaluated using:
+The initial version should measure:
 
-* Time saved by the founder
-* Number of tasks completed
+* Successful cross-repository workflows
+* Workflow completion time
+* Founder time saved
 * Percentage of tasks requiring intervention
-* Number of successful multi-agent workflows
-* Reduction in missed community requests
-* Content produced from community discussions
-* Response time to community members
-* Number of blocked unsafe actions
-* Ease of installing a new agent
+* Unsafe actions blocked by Rick
+* Failures diagnosed by Bastion
+* Time required to install a new agent
+* Contract compatibility across agent versions
 
 ---
 
 # One-Line Pitch
 
-Kingdom of PAL is a modular AI operating system that allows community-driven founders to deploy a coordinated team of specialised agents working toward a shared vision.
-
----
+Kingdom of PAL is a repository-of-repositories that coordinates independent AI agents into one governed operating team for community-driven businesses.
 
 # Short Pitch
 
-Community-driven founders often have to manage content, engagement, infrastructure, security, sales, and customer support alone.
+Community founders often manage engagement, content, websites, security, and infrastructure alone.
 
-Kingdom of PAL gives them a modular AI operating team.
+Kingdom of PAL gives them a modular AI operating team. Each agent lives in its own repository, owns a specialised responsibility, and integrates through shared contracts.
 
-Founders define their vision through a central charter, install the agents they need, and expand their kingdom as their business grows.
+Orin understands and coordinates the community. Scribe creates and maintains content. Rick protects the kingdom. Bastion keeps the system healthy.
 
-Each agent has a clear role, permissions, boundaries, and access to shared organisational context, allowing the agents to collaborate while keeping important decisions under human control.
-
+Together, they operate under the Founder's Charter while keeping consequential decisions under human control.
