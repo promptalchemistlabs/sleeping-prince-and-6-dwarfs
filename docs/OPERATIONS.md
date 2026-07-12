@@ -62,20 +62,33 @@ For local testing of uncommitted script changes only:
 ./scripts/redeploy.sh --skip-sync --skip-install
 ```
 
-## Zo Computer managed-service setup
+## Zo Computer public-service deployment
 
-Zo Sites publication is a Zo tool action rather than a repository CLI. The
-portable option is to create one managed HTTP service in Zo with:
+The production landing page is registered in Zo as a public HTTP service:
 
+- Service label: `kingdom-of-pal`
+- Public URL: <https://kingdom-of-pal-sayyidkhan.zocomputer.io>
 - Working directory: `/home/workspace/Start/pal/sleeping-prince`
 - Entrypoint: `./scripts/serve.sh`
-- Port: any port assigned by Zo through `PORT`
-- Visibility: private while validating, public only when approved
+- Local port: `4321` (Zo also provides this to the process as `PORT`)
+- Visibility: **Public**
 
-Run `./scripts/redeploy.sh` before starting the service. Later redeploys switch
-the `.deploy/current` symlink atomically, so the supervised server immediately
-serves the new verified release. Configure the service URL as
-`PAL_HEALTHCHECK_URL` once it exists.
+From the repository on Zo, redeploy with:
+
+```bash
+./scripts/redeploy-zo.sh
+```
+
+Use `--skip-install` only when the checked-in lockfiles have not changed and the
+exact dependencies are already installed. The wrapper syncs `main`, validates
+the project, atomically switches `.deploy/current`, and checks the public URL.
+If the anonymous public health check fails, it restores the previous release.
+
+Public/private visibility is Zo service metadata, not a repository setting.
+The wrapper deliberately does not alter visibility; confirm the service still
+shows **Public** in Zo Hosting after any manual service edit. A Zo account that
+allows the computer to sleep requires always-on hosting for the URL to remain
+available while the computer is asleep.
 
 Do not use `git submodule update --remote` in production. That bypasses the
 reviewed parent-repository pins and can combine incompatible agent revisions.

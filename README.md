@@ -77,12 +77,13 @@ Computer checkouts:
 ./scripts/build.sh
 ./scripts/sync.sh
 ./scripts/redeploy.sh
+./scripts/redeploy-zo.sh
 ```
 
 `sync.sh` fast-forwards the parent and restores the four submodules to their
 reviewed pins. `redeploy.sh` validates the website before atomically activating
 a versioned static release. See [`docs/OPERATIONS.md`](docs/OPERATIONS.md) for
-hosting, health-check, rollback and Zo managed-service setup.
+hosting, health-check, rollback and the public Zo managed-service setup.
 
 ## Hackathon environment
 
