@@ -16,6 +16,14 @@ in that root file. All agent processes
 must be launched from the kingdom root with `node --env-file=.env ...`; nested
 agent `.env` files are not used.
 
+Before adding model or database calls, verify the local assembly:
+
+```bash
+npm test
+npm run hello
+curl http://127.0.0.1:4000/hello
+```
+
 ## Primary scenario
 
 Founder request:

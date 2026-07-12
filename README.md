@@ -94,6 +94,21 @@ Node's `--env-file=.env` option.
 See [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md) for variable ownership and the
 launch convention.
 
+## Local hello world
+
+The first executable slice is a dependency-free local kingdom runtime. It does
+not call OpenAI or Turso; it verifies configuration loading, HTTP routing and
+the identity of the four essential agents.
+
+```bash
+npm test
+npm run hello
+curl http://127.0.0.1:4000/hello
+```
+
+Available routes are `/health`, `/hello`, `/agents`, and
+`/agents/:id/health`.
+
 ## Agent lifecycle
 
 An installed agent must declare its source, version, capabilities, permissions,

@@ -33,13 +33,14 @@ through the platform rather than copying `.env` into an image.
 
 ## Variable ownership
 
-| Owner      | Variables                                                                           |
-| ---------- | ----------------------------------------------------------------------------------- |
-| All agents | `NODE_ENV`, `LOG_LEVEL`, `OPENAI_API_KEY`, `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` |
-| Orin       | `ORIN_PORT`                                                                         |
-| Scribe     | `SCRIBE_PORT`                                                                       |
-| Rick       | `RICK_PORT`                                                                         |
-| Bastion    | `BASTION_PORT`                                                                      |
+| Owner           | Variables                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| All agents      | `NODE_ENV`, `LOG_LEVEL`, `OPENAI_API_KEY`, `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` |
+| Kingdom runtime | `KINGDOM_PORT`                                                                      |
+| Orin            | `ORIN_PORT`                                                                         |
+| Scribe          | `SCRIBE_PORT`                                                                       |
+| Rick            | `RICK_PORT`                                                                         |
+| Bastion         | `BASTION_PORT`                                                                      |
 
 For hackathon speed, all agents connect to the same Turso database with the same
 credentials. Agent memory is separated by table rather than by database:
